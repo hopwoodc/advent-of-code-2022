@@ -72,8 +72,7 @@ namespace day1
         This helps us avoid needing to create separate Head or Tail
         subclases, and avoid having a "valid" flag...
         */
-        //not sure if the IComparable specification is strictly necessary
-        public class SortedNode
+        private class SortedNode
         {
             public T value;
             public SortedNode? nextNode = null;
@@ -85,7 +84,7 @@ namespace day1
 
         //In C# variables can be null, which is distinct from 0, unlike how it is in C.
         //Variables have to be marked nullable with a question mark at the end of the type name.
-        public SortedNode? head = null;
+        private SortedNode? head = null;
         
         public void AddNode (T other){
             var newNode = new SortedNode(other);
